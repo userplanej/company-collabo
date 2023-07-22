@@ -1,0 +1,10 @@
+LIVEBLOCKS_SECRET_KEY=sk_dev_AKhFW7v1amXEAjN49Vy064ohhLy7sbQ6ZdXE4EysKuDv0i2vuxdaFb_fGcdLJrNj
+NEXTAUTH_SECRET=5d2868994e6af19a829b20eda4110f4f
+NEXTAUTH_URL=http://localhost:3000
+## Generate a random secret: https://generate-secret.vercel.app/32 or `openssl rand -base64 32`
+AUTH_SECRET=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
+## Create a GitHub OAuth app here: https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/creating-an-oauth-app
+AUTH_GITHUB_ID=11caed70c6c3ff3b3303
+AUTH_GITHUB_SECRET=b0bbad6a2761e8909b9d8e54bb21c2f84c86321c
+## Support OAuth login on preview deployments, see: https://authjs.dev/guides/basics/deployment#securing-a-preview-deployment
+AUTH_REDIRECT_PROXY_URL=http://localhost:3000
