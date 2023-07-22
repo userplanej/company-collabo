@@ -13,7 +13,7 @@ export function MarketingFooter({
 
   return (
     <footer className={clsx(className, styles.footer)} {...props}>
-      <Container className={styles.container}>
+      <Container className={clsx("mt-24", styles.container)}>
         <span className={styles.copyright}>© {year} Userplane Inc.</span>
         <LinkButton
           href="#"

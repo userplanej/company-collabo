@@ -164,12 +164,15 @@ export function LandingPage() {
           </div>
         </Container>
 
-        <div className={clsx("container")} ref={ref_container_trigger}>
+        <div
+          className={clsx("w-full my-8 mx-4 md:mx-24 md:max-w-5xl  ")}
+          ref={ref_container_trigger}
+        >
           <h2 className={clsx("context-bound", styles.sectionTitle)}>
             우리회사 서비스
           </h2>
           <div className={clsx("md:flex md:flex-row md:h-[500px]")}>
-            <div className="grid gap-4 pr-4 h-auto">
+            <div className="mb-4 grid gap-4 pr-4 h-auto">
               <Feature
                 actionButton={true}
                 description={
@@ -274,7 +277,7 @@ export function LandingPage() {
                 title="Our Services"
               />
             </div>
-            <div className="grid">
+            <div className="grid pr-4 h-auto">
               <Feature
                 description={
                   <>
