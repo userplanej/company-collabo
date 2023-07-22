@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Badge } from "../components/Badge";
 import { Inter } from "next/font/google";
+import { Providers } from "../components/providers";
 
 import "./globals.css";
 import { ReactNode, Suspense } from "react";
@@ -25,11 +26,10 @@ export default async function RootLayout({
             <title>Starter Kit</title>
             <link href="/favicon.svg" rel="icon" type="image/svg" />
           </Head>
-          <main className={clsx("container", inter.className)}>
+          <Providers>
             {children}
-
             <Badge />
-          </main>
+          </Providers>
         </body>
       </html>
     </>
