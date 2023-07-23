@@ -31,66 +31,89 @@ export const MarketingHeader = React.forwardRef(
             styles.container
           )}
         >
-          <Link href="/">
-            <Logo />
-          </Link>
-
-          <div
-            className={clsx(
-              "flex absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 py-2 space-x-6 rounded-full",
-              "bg-[#303238] border border-[#FFFFFF]/[0.35] text-[14px] items-center justify-center px-6 font-medium overflow-hidden"
-            )}
-          >
-            <canvas
-              className="gradientStyles"
-              id="gradient-canvas"
-              data-transition-in
-            />
-            <a
-              className="relative group bg-transparent hover:text-white/[0.64] transition duration-200"
-              href="#"
-            >
-              Pricing
-            </a>
-
-            <a
-              target="__blank"
-              rel="noopener noreferrer"
-              href="#"
-              className="relative group bg-transparent hover:text-white/[0.64] transition duration-200"
-            >
-              GitHub
-            </a>
-
-            <a
-              target="__blank"
-              rel="noopener noreferrer"
-              href="#"
-              className="relative group bg-transparent hover:text-white/[0.64] transition duration-200"
-            >
-              Discord
-            </a>
-
-            <a
-              target="__blank"
-              rel="noopener noreferrer"
-              href="#"
-              className="relative group bg-transparent hover:text-white/[0.64] transition duration-200"
-            >
-              Company
-            </a>
-
-            <a
-              target="__blank"
-              rel="noopener noreferrer"
-              href="#"
-              className="relative group bg-transparent hover:text-white/[0.64] transition duration-200"
-            >
-              Changelog
-            </a>
+          <div className="hidden md:block">
+            <Link href="/">
+              <Logo />
+            </Link>
           </div>
 
-          <div className="flex space-x-4 items-center">
+          <div className="flex md:hidden">
+            <div className=" fixed inset-0 top-4 w-full  z-50 flex items-center justify-end align-middle px-4">
+              <div className="w-full flex flex-row items-center justify-between  backdrop-blur-md border border-[#FFFFFF]/[0.16] px-4 py-2 rounded-full ">
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 512 512"
+                  className="text-black h-5 w-5"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M432 176H80c-8.8 0-16-7.2-16-16s7.2-16 16-16h352c8.8 0 16 7.2 16 16s-7.2 16-16 16zM432 272H80c-8.8 0-16-7.2-16-16s7.2-16 16-16h352c8.8 0 16 7.2 16 16s-7.2 16-16 16zM432 368H80c-8.8 0-16-7.2-16-16s7.2-16 16-16h352c8.8 0 16 7.2 16 16s-7.2 16-16 16z"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div className="hidden md:flex">
+            <div
+              className={clsx(
+                "flex absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 py-2 space-x-6 rounded-full",
+                "bg-[#303238] border border-[#FFFFFF]/[0.35] text-[14px] items-center justify-center px-6 font-medium overflow-hidden"
+              )}
+            >
+              <canvas
+                className="gradientStyles"
+                id="gradient-canvas"
+                data-transition-in
+              />
+              <a
+                className="relative group bg-transparent hover:text-white/[0.64] transition duration-200"
+                href="#"
+              >
+                Pricing
+              </a>
+
+              <a
+                target="__blank"
+                rel="noopener noreferrer"
+                href="#"
+                className="relative group bg-transparent hover:text-white/[0.64] transition duration-200"
+              >
+                GitHub
+              </a>
+
+              <a
+                target="__blank"
+                rel="noopener noreferrer"
+                href="#"
+                className="relative group bg-transparent hover:text-white/[0.64] transition duration-200"
+              >
+                Discord
+              </a>
+
+              <a
+                target="__blank"
+                rel="noopener noreferrer"
+                href="#"
+                className="relative group bg-transparent hover:text-white/[0.64] transition duration-200"
+              >
+                Company
+              </a>
+
+              <a
+                target="__blank"
+                rel="noopener noreferrer"
+                href="#"
+                className="relative group bg-transparent hover:text-white/[0.64] transition duration-200"
+              >
+                Changelog
+              </a>
+            </div>
+          </div>
+
+          <div className="hidden md:flex md:space-x-4 md:items-center">
             <button
               className="group relative rounded-full p-px text-[0.8125rem] font-semibold leading-6 shadow-lg shadow-zinc-700 text-white"
               onClick={() => signIn()}
